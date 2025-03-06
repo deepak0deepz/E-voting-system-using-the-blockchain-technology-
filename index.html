@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>E-Voting System</h1>
+
+    <!-- Login Page -->
+    <div id="loginPage">
+        <h2>Login/Register</h2>
+        <input type="text" id="loginName" placeholder="Enter your name">
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+        <button onclick="showResults()">View Results</button>
+        <div id="loginMessage"></div>
+    </div>
+
+    <!-- Voting Page -->
+<div id="votingPage" style="display:none;">
+    <h2>Vote</h2>
+    <p id="welcome"></p>
+    <label for="candidate">Select Candidate:</label>
+    <select id="candidate">
+        <option value="Candidate A">DEEPAK</option>
+        <option value="Candidate B">ANVITHA</option>
+        <option value="Candidate C">NOTA</option>
+    </select>
+    <br>
+    <button onclick="castVote()">Vote</button>
+    <button onclick="logout()">Logout</button> <!-- Added Logout Button -->
+</div>
+
+
+    <!-- Results Section -->
+<div id="resultsPage" style="display:none;">
+    <h2>Results</h2>
+    <div id="resultDisplay"></div>
+    <br>
+    <!-- Added Back to Login Button -->
+    <button onclick="backToLogin()">Back to Login Page</button>
+</div>
+
+
+    <!-- Blockchain Display for Admin -->
+    <div id="blockchainPage" style="display:none;">
+        <h2>Blockchain Privacy</h2>
+        <div id="blockchainDisplay"></div>
+        <button onclick="logout()">Logout</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
